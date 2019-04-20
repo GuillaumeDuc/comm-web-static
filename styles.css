@@ -1,0 +1,62 @@
+#game table {
+  border: 3px blue outset;
+  background-color: blue;
+}
+#game td {
+  width: 2cm;
+  height: 2cm;
+  margin: 0px;
+  padding: 0px;
+  border: 2px blue inset;
+  border-radius: 2cm;
+  background-color: white;
+  cursor: pointer;
+}
+#game td.player1 {
+  background-color: red;
+}
+#game td.player2 {
+  background-color: yellow;
+}
+#selection {
+  display: flex;
+  height: 300px;
+}
+#difficultyButton {
+  display: inline-block;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: auto;
+}
+#difficultyButton #easy {
+  padding: 15px 32px;
+  background-color: #4caf50;
+}
+#difficultyButton #medium {
+  padding: 15px 32px;
+  background-color: #008cba;
+}
+#difficultyButton #hard {
+  padding: 15px 32px;
+  background-color: #f44336;
+}
+#retry {
+  display: inline-block;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 15px 32px;
+  background-color: #555555;
+  display: none;
+  margin: 2% 20%;
+}
+#buttonWrapper {
+  display: flex;
+  cursor: pointer;
+}
