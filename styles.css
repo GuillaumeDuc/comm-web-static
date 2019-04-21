@@ -35,14 +35,26 @@
 #difficultyButton #easy {
   padding: 15px 32px;
   background-color: #4caf50;
+  transition: all 0.5s;
+}
+#difficultyButton #easy:hover {
+  background-color: lightgreen;
 }
 #difficultyButton #medium {
   padding: 15px 32px;
   background-color: #008cba;
+  transition: all 0.5s;
+}
+#difficultyButton #medium:hover {
+  background-color: lightblue;
 }
 #difficultyButton #hard {
   padding: 15px 32px;
   background-color: #f44336;
+  transition: all 0.5s;
+}
+#difficultyButton #hard:hover {
+  background-color: lightcoral;
 }
 #retry {
   display: inline-block;
@@ -54,9 +66,31 @@
   padding: 15px 32px;
   background-color: #555555;
   display: none;
-  margin: 2% 20%;
+  margin: 2% 10%;
+  transition: all 0.5s;
+}
+#retry:hover {
+  background-color: lightgray;
 }
 #buttonWrapper {
   display: flex;
   cursor: pointer;
+}
+#displayWinner {
+  display: none;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2% 10%;
+}
+#displayWinner:hover {
+  opacity: 1;
+  background-color: pink;
 }

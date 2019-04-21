@@ -222,6 +222,7 @@ window.onload = function() {
           window.alert("Null");
           break;
         case 1:
+          this.displayWinner();
           window.alert("Gagner !");
           break;
         case 2:
@@ -230,9 +231,29 @@ window.onload = function() {
       }
     }
 
-    displayWinner(text) {
+    displayWinner() {
       let displayWinner = document.getElementById("displayWinner");
-      displayWinner.innerHTML = text;
+      displayWinner.style.display = "inline-block";
+      switch (this.depth) {
+        case 1:
+          displayWinner.innerHTML = "CV";
+          displayWinner.addEventListener("click", event =>
+            window.open("./CV.pdf", "CV")
+          );
+          break;
+        case 3:
+          displayWinner.innerHTML = "Attentes professionnelles";
+          displayWinner.addEventListener("click", event =>
+            window.open("./attentes.pdf", "attentes")
+          );
+          break;
+        case 5:
+          displayWinner.innerHTML = "Parcours professionnel";
+          displayWinner.addEventListener("click", event =>
+            window.open("./parcours.pdf", "parcours")
+          );
+          break;
+      }
     }
 
     handle_click(event) {
@@ -260,6 +281,7 @@ window.onload = function() {
               window.alert("Null");
               break;
             case 1:
+              this.displayWinner();
               window.alert("Gagner !");
               break;
             case 2:
@@ -341,6 +363,9 @@ window.onload = function() {
     game.style.display = "none";
     let retry = document.getElementById("retry");
     retry.style.display = "none";
+    let displayWinner = document.getElementById("displayWinner");
+    displayWinner.style.display = "none";
+    document.location.reload(true);
   }
 
   let easy = document.getElementById("easy");
